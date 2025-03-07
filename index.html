@@ -7,25 +7,53 @@
                 display: inline;
                 padding: 10;
             }
+            .playerinfo {
+                display: inline-block;
+                padding: 0 12 10;
+                outline: solid;
+            }
         </style>
     </head>
-    <body onload="LoadValues()">
+    <body>
         <h1>Scoundrel Tracker</h1>
-        <h4>Player 1 Health</h4>
-        <div>
-            <button onclick="Player1Decrement()">-</button><p id="player1healthcounter">20</p><button onclick="Player1Increment()">+</button>
+
+        <div class="playerinfo" id="player1info">
+            <h3>Player 1</h3>
+            <h4>Health</h4>
+            <div>
+                <button onclick="PlayerDecrement(1)">-</button><p id="player1healthcounter">20</p><button onclick="PlayerIncrement(1)">+</button>
+            </div>
+            <h4>Weapon</h4>
+            <input id="player1weaponinput" type="text">
         </div>
-        <h4>Player 2 Health</h4>
+        <div class="playerinfo" id="player2info">
+            <h3>Player 2</h3>
+            <h4>Health</h4>
+            <div>
+                <button onclick="PlayerDecrement(2)">-</button><p id="player2healthcounter">20</p><button onclick="PlayerIncrement(2)">+</button>
+            </div>
+            <h4>Weapon</h4>
+            <input id="player2weaponinput" type="text">
+        </div>
+
+        <br>
+        <h4>Floor: </h4>
+        <button onclick="FloorDecrement()">-</button><p id="floorcounter">1</p><button onclick="FloorIncrement()">+</button>
+        <br>
+        <h4>Used Red Face Cards</h4>
+        <input id="usedcardinput" type="text">
+
+        <br>
+        <br>
+        <h2>Save Data</h2>
         <div>
-            <button onclick="Player2Decrement()">-</button><p id="player2healthcounter">20</p><button onclick="Player2Increment()">+</button>
+            <input id="savename" type="text" style="display: inline;">
+            <button onclick="SaveValues()">Save Current Values</button>
         </div>
         <br>
-        <br>
-        <h4>Player 1's Weapon</h4>
-        <input id="player1weaponinput" type="text">
-        <h4>Player 1's Weapon</h4>
-        <input id="player2weaponinput" type="text">
-        <br>
-        <button onclick="SaveValues()">Save Current Values</button>
+        <div>
+            <input id="loadname" type="text" style="display: inline;">
+            <button onclick="LoadValues()">Load Values</button>
+        </div>
     </body>
 </html>
