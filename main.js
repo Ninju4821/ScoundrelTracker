@@ -52,8 +52,8 @@ function LoadValues ()
     {
         playerHealth[1] = valuesArray[0];
         playerHealth[2] = valuesArray[1];
-        document.getElementById("player1healthcounter").innerText = player1health;
-        document.getElementById("player2healthcounter").innerText = player2health;
+        document.getElementById("player1healthcounter").innerText = playerHealth[1];
+        document.getElementById("player2healthcounter").innerText = playerHealth[2];
         document.getElementById("player1weaponinput").value = valuesArray[2];
         document.getElementById("player2weaponinput").value = valuesArray[3];
         document.getElementById("usedcardinput").value = valuesArray[4];
