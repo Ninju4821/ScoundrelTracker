@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Scoundrel Tracker</title>
+        <script src="main.js"></script>
+        <style>
+            p {
+                display: inline;
+                padding: 10;
+            }
+        </style>
+    </head>
+    <body onload="LoadValues()">
+        <h1>Scoundrel Tracker</h1>
+        <h4>Player 1 Health</h4>
+        <div>
+            <button onclick="Player1Decrement()">-</button><p id="player1healthcounter">20</p><button onclick="Player1Increment()">+</button>
+        </div>
+        <h4>Player 2 Health</h4>
+        <div>
+            <button onclick="Player2Decrement()">-</button><p id="player2healthcounter">20</p><button onclick="Player2Increment()">+</button>
+        </div>
+        <br>
+        <br>
+        <h4>Player 1's Weapon</h4>
+        <input type="text">
+        <h4>Player 1's Weapon</h4>
+        <input type="text">
+        <br>
+        <button>Save Current Values</button>
+    </body>
+</html>
