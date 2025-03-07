@@ -17,12 +17,6 @@ function PlayerIncrement (playerNum)
     document.getElementById("player" + String(playerNum) + "healthcounter").innerText = playerHealth[playerNum];
 }
 
-function Player2Decrement ()
-{
-    player2health--;
-    document.getElementById("player2healthcounter").innerText = player2health;
-}
-
 function FloorDecrement ()
 {
     floor--;
@@ -54,7 +48,7 @@ function SaveValues ()
 function LoadValues ()
 {
     var valuesArray = getCookie(document.getElementById("loadname").value).split("-");
-    if (valuesArray.length == 5)
+    if (valuesArray.length == 6)
     {
         playerHealth[1] = valuesArray[0];
         playerHealth[2] = valuesArray[1];
