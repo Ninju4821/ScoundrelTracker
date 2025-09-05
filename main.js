@@ -4,7 +4,7 @@ var floor = 1;
 function PlayerDecrement (playerNum)
 {
     playerHealth[playerNum]--;
-    document.getElementById("player" + String(playerNum) + "healthcounter").innerText = playerHealth[playerNum];
+    document.getElementById("player" + String(playerNum) + "healthcounter").innerText = String(playerHealth[playerNum]).padStart(2, '0');
 }
 
 function PlayerIncrement (playerNum)
@@ -14,7 +14,7 @@ function PlayerIncrement (playerNum)
     {
         playerHealth[playerNum] = 20;
     }
-    document.getElementById("player" + String(playerNum) + "healthcounter").innerText = playerHealth[playerNum];
+    document.getElementById("player" + String(playerNum) + "healthcounter").innerText = String(playerHealth[playerNum]).padStart(2, '0');
 }
 
 function FloorDecrement ()
