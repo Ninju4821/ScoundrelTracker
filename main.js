@@ -36,28 +36,38 @@ function FloorIncrement ()
 function SaveValues ()
 {
     setCookie(document.getElementById("savename").value,
-            String(playerHealth[1]) + "-"
-            + String(playerHealth[2]) + "-"
-            + document.getElementById("player1weaponinput").value + "-"
-            + document.getElementById("player2weaponinput").value + "-"
-            + document.getElementById("usedcardinput").value + "-"
-            + String(floor),
-            9999);
+        String(playerHealth[1]) + "-"
+        + String(playerHealth[2]) + "-"
+        + String(playerHealth[3]) + "-"
+        + String(playerHealth[4]) + "-"
+        + document.getElementById("player1weaponinput").value + "-"
+        + document.getElementById("player2weaponinput").value + "-"
+        + document.getElementById("player3weaponinput").value + "-"
+        + document.getElementById("player4weaponinput").value + "-"
+        + document.getElementById("usedcardinput").value + "-"
+        + String(floor),
+        9999);
 }
 
 function LoadValues ()
 {
     var valuesArray = getCookie(document.getElementById("loadname").value).split("-");
-    if (valuesArray.length == 6)
+    if (valuesArray.length == 10)
     {
         playerHealth[1] = valuesArray[0];
         playerHealth[2] = valuesArray[1];
+        playerHealth[3] = valuesArray[2];
+        playerHealth[4] = valuesArray[3];
         document.getElementById("player1healthcounter").innerText = playerHealth[1];
         document.getElementById("player2healthcounter").innerText = playerHealth[2];
-        document.getElementById("player1weaponinput").value = valuesArray[2];
-        document.getElementById("player2weaponinput").value = valuesArray[3];
-        document.getElementById("usedcardinput").value = valuesArray[4];
-        floor = valuesArray[5];
+        document.getElementById("player3healthcounter").innerText = playerHealth[3];
+        document.getElementById("player4healthcounter").innerText = playerHealth[4];
+        document.getElementById("player1weaponinput").value = valuesArray[4];
+        document.getElementById("player2weaponinput").value = valuesArray[5];
+        document.getElementById("player3weaponinput").value = valuesArray[6];
+        document.getElementById("player4weaponinput").value = valuesArray[7];
+        document.getElementById("usedcardinput").value = valuesArray[8];
+        floor = valuesArray[9];
         document.getElementById("floorcounter").innerText = floor;
     }
 }
