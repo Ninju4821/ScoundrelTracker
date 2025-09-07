@@ -1,6 +1,6 @@
 
 # Scoundrel Tracker
-This website was created to help keep track of the dungeon crawler card game Scoundrel. You can view and use this website at scoundrel.startuperror.xyz (a visual interface is also in the works). The adapted rules are below in case you wish to learn or teach the game.
+This website was created to help keep track of the dungeon crawler card game Scoundrel. You can view and use this website at http://scoundrel.startuperror.xyz (a visual interface is also in the works). The adapted rules are below in case you wish to learn or teach the game.
 
 ## Setup
 Give the deck a thorough shuffle. Deal out four cards face up in the center of the table. For each additional player above one, deal out two more cards. This creates your "room".
