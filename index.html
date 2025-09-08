@@ -1,4 +1,4 @@
-<html>
+<html style="filter: invert(100%); background-color: white;">
     <head>
         <title>Scoundrel Tracker</title>
         <script src="main.js?v=0.2"></script>
@@ -12,46 +12,59 @@
                 padding: 0 12 10;
                 outline: solid;
             }
+            .fit_screen {
+                width: 100%;
+                display: grid;
+                height: 85%
+            }
+            .health_button {
+                width: 35%;
+                height: 35%;
+            }
+            .health_counter {
+                font-size: 100%;
+            }
         </style>
     </head>
     <body>
         <h1>Scoundrel Tracker</h1>
-
-        <div class="playerinfo" id="player1info">
-            <h3>Player 1</h3>
-            <h4>Health</h4>
-            <div>
-                <button onclick="PlayerDecrement(1)">-</button><p id="player1healthcounter">20</p><button onclick="PlayerIncrement(1)">+</button>
+        <div class="fit_screen">
+            <div class="playerinfo" id="player1info" style="grid-column: 1;">
+                <h3>Player 1</h3>
+                <h4>Health</h4>
+                <div>
+                    <button onclick="PlayerDecrement(1)" class="health_button">-</button><p id="player1healthcounter" class="health_counter">20</p><button onclick="PlayerIncrement(1)" class="health_button">+</button>
+                </div>
+                <h4>Weapon</h4>
+                <input id="player1weaponinput" type="text">
             </div>
-            <h4>Weapon</h4>
-            <input id="player1weaponinput" type="text">
-        </div>
-        <div class="playerinfo" id="player2info">
-            <h3>Player 2</h3>
-            <h4>Health</h4>
-            <div>
-                <button onclick="PlayerDecrement(2)">-</button><p id="player2healthcounter">20</p><button onclick="PlayerIncrement(2)">+</button>
+            <div class="playerinfo" id="player2info" style="grid-column: 2;">
+                <h3>Player 2</h3>
+                <h4>Health</h4>
+                <div>
+                    <button onclick="PlayerDecrement(2)" class="health_button">-</button><p id="player2healthcounter" class="health_counter">20</p><button onclick="PlayerIncrement(2)" class="health_button">+</button>
+                </div>
+                <h4>Weapon</h4>
+                <input id="player2weaponinput" type="text">
             </div>
-            <h4>Weapon</h4>
-            <input id="player2weaponinput" type="text">
-        </div>
-        <div class="playerinfo" id="player3info">
-            <h3>Player 3</h3>
-            <h4>Health</h4>
-            <div>
-                <button onclick="PlayerDecrement(3)">-</button><p id="player3healthcounter">20</p><button onclick="PlayerIncrement(3)">+</button>
+            <div class="playerinfo" id="player3info" style="grid-column: 1;">
+                <h3>Player 3</h3>
+                <h4>Health</h4>
+                <div>
+                    <button onclick="PlayerDecrement(3)" class="health_button">-</button><p id="player3healthcounter" class="health_counter">20</p><button onclick="PlayerIncrement(3)" class="health_button">+</button>
+                </div>
+                <h4>Weapon</h4>
+                <input id="player3weaponinput" type="text">
             </div>
-            <h4>Weapon</h4>
-            <input id="player3weaponinput" type="text">
-        </div>
-        <div class="playerinfo" id="player4info">
-            <h3>Player 4</h3>
-            <h4>Health</h4>
-            <div>
-                <button onclick="PlayerDecrement(4)">-</button><p id="player4healthcounter">20</p><button onclick="PlayerIncrement(4)">+</button>
+            <div class="playerinfo" id="player4info" style="grid-column: 2;">
+                <h3>Player 4</h3>
+                <h4>Health</h4>
+                <div>
+                    <button onclick="PlayerDecrement(4)" class="health_button">-</button><p id="player4healthcounter" class="health_counter">20</p><button onclick="PlayerIncrement(4)" class="health_button">+</button>
+                </div>
+                <h4>Weapon</h4>
+                <input id="player4weaponinput" type="text">
             </div>
-            <h4>Weapon</h4>
-            <input id="player4weaponinput" type="text">
         </div>
 
         <br>
